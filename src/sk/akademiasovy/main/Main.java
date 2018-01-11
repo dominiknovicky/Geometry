@@ -4,8 +4,6 @@ import sk.akademiasovy.geometry.Rectangle;
 import sk.akademiasovy.geometry.Square;
 import sk.akademiasovy.geometry.Triangle;
 
-import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -22,11 +20,14 @@ public class Main {
         System.out.println("Rectangle perimeter: " +rec2.getPerimeter());
         System.out.println("Rectangle diagonal: " +rec3.getDiagonal());
 
-        Triangle trn1 = new Triangle(4,8,11),
+        Triangle trn1 = new Triangle(6, 6, 6),
                  trn2 = new Triangle();
         System.out.println("Triangle area: " +trn1.getArea());
         System.out.println("Triangle perimeter: " +trn1.getPerimeter());
         System.out.println("Is triangle right-angled? " +trn1.isRightAngled());
         System.out.println("Is triangle right-angled? " +trn2.isRightAngled());
+        System.out.println(trn1.exists());
+        System.out.println(trn1.isEquilateral());
+        System.out.println(trn1.isIsosceles());
     }
 }

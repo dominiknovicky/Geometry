@@ -24,32 +24,36 @@ public class Triangle {
         return Math.sqrt(s*(s-a)*(s-b)*(s-c));
     }
     public boolean isRightAngled(){
-        if (a*a+b*b==c*c){
+        if (a*a+b*b==c*c)
             return true;
-        }
-        else if(a*a+c*c==b*b){
+        else if(a*a+c*c==b*b)
             return true;
-        }
-        else if (b*b+c*c==a*a){
+        else if (b*b+c*c==a*a)
             return true;
-        }
-        else {
+        else
             return false;
-        }
     }
 
-    //dá sa zostrojit
     public boolean exists(){
-        if(a+b>c || a+c>b || b+c>a){
-            return true;
-        }
-        else {
+        if(a == 0 || b == 0 || c == 0)
             return false;
-        }
+        else if(a+b<=c || b+c<=a || a+c<=b)
+            return false;
+        else
+            return true;
     }
-    
-    //rovnostranny
+    public boolean isEquilateral(){
+        if(exists() && (a == b && b == c && a == c))
+            return true;
+        else
+            return false;
+    }
 
-    //rovnoramenny
+    public boolean isIsosceles(){
+        if(exists() && (a == b || b == c || a == c))
+            return true;
+        else
+            return false;
+    }
 
 }
