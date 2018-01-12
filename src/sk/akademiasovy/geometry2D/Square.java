@@ -1,6 +1,6 @@
-package sk.akademiasovy.geometry;
+package sk.akademiasovy.geometry2D;
 
-public class Square {
+public class Square implements Operation, Diagonal {
     private double a;
 
     public Square(double value) {
@@ -10,17 +10,11 @@ public class Square {
         a = 0;
     }
 
-    public double getA() {
-        return a;
-    }
-
-    public void setA(double a) {
-        this.a = a;
-    }
-
+    @Override
     public double getArea(){
         return a*a;
     }
+    @Override
     public double getPerimeter(){
         return 4*a;
     }

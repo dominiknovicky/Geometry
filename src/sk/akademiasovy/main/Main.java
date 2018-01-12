@@ -1,8 +1,9 @@
 package sk.akademiasovy.main;
 
-import sk.akademiasovy.geometry.Rectangle;
-import sk.akademiasovy.geometry.Square;
-import sk.akademiasovy.geometry.Triangle;
+import sk.akademiasovy.geometry2D.Circle;
+import sk.akademiasovy.geometry2D.Rectangle;
+import sk.akademiasovy.geometry2D.Square;
+import sk.akademiasovy.geometry2D.Triangle;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,5 +30,10 @@ public class Main {
         System.out.println(trn1.exists());
         System.out.println(trn1.isEquilateral());
         System.out.println(trn1.isIsosceles());
+
+        Circle c = new Circle(5);
+        System.out.println("Circle area: " +c.getArea());
+        System.out.println("Circle perimeter: " +c.getPerimeter());
+
     }
 }

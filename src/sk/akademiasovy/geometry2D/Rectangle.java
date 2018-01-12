@@ -1,6 +1,6 @@
-package sk.akademiasovy.geometry;
+package sk.akademiasovy.geometry2D;
 
-public class Rectangle {
+public class Rectangle implements Operation, Diagonal {
     private int a;
     private int b;
 
@@ -14,10 +14,11 @@ public class Rectangle {
     public Rectangle(int value){
         a = b = value;
     }
-
+    @Override
     public double getArea(){
         return a*b;
     }
+    @Override
     public double getPerimeter(){
         return 2*(a+b);
     }
